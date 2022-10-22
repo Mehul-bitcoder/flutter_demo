@@ -2,6 +2,7 @@ import 'package:appdemo/custom_pallete.dart';
 import 'package:appdemo/screens/home.dart';
 import 'package:appdemo/screens/login.dart';
 import 'package:appdemo/utils/routes.dart';
+import 'package:appdemo/widgets/theme.dart';
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 
@@ -17,10 +18,8 @@ class DemoApp extends StatelessWidget {
     return MaterialApp(
       // home: Home(),
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: midBlue),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-      ),
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
       initialRoute: MyRoutes.homeRoute,
       debugShowCheckedModeBanner: false,
       routes: {
