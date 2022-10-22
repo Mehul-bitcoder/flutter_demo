@@ -56,14 +56,21 @@ class _HomeState extends State<Home> {
                         borderRadius: BorderRadius.circular(10)),
                     child: GridTile(
                       header: Container(
-                        color: midBlue,
+                        decoration: BoxDecoration(color: midBlue),
                         padding: const EdgeInsets.all(12),
                         child: Text(
                           item.name,
                           style: const TextStyle(color: Colors.white),
                         ),
                       ),
-                      footer: Text(item.price.toString()),
+                      footer: Container(
+                        decoration: BoxDecoration(color: Colors.black),
+                        padding: const EdgeInsets.all(12),
+                        child: Text(
+                          item.price.toString(),
+                          style: const TextStyle(color: Colors.white),
+                        ),
+                      ),
                       child: Image.network(item.image),
                     ),
                   );
