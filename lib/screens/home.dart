@@ -1,7 +1,4 @@
-import 'package:appdemo/custom_pallete.dart';
 import 'package:appdemo/models/catalog.dart';
-import 'package:appdemo/widgets/drawer.dart';
-import 'package:appdemo/widgets/item_widget.dart';
 import 'package:appdemo/widgets/theme.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
