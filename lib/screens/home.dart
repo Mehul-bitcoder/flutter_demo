@@ -1,3 +1,4 @@
+import 'package:appdemo/custom_pallete.dart';
 import 'package:appdemo/models/catalog.dart';
 import 'package:appdemo/widgets/drawer.dart';
 import 'package:appdemo/widgets/item_widget.dart';
@@ -41,11 +42,30 @@ class _HomeState extends State<Home> {
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: (CatalogModel.items.isNotEmpty)
-            ? ListView.builder(
-                itemCount: CatalogModel.items.length,
-                itemBuilder: (context, index) => ItemWidget(
-                      item: CatalogModel.items[index],
-                    ))
+            ? GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, mainAxisSpacing: 16),
+                itemBuilder: ((context, index) {
+                  final item = CatalogModel.items[index];
+                  return Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    child: GridTile(
+                      header: Container(
+                        color: midBlue,
+                        padding: const EdgeInsets.all(12),
+                        child: Text(
+                          item.name,
+                          style: const TextStyle(color: Colors.white),
+                        ),
+                      ),
+                      footer: Text(item.price.toString()),
+                      child: Image.network(item.image),
+                    ),
+                  );
+                }),
+              )
             : const Center(
                 child: CircularProgressIndicator(),
               ),
