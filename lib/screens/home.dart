@@ -47,6 +47,7 @@ class _HomeState extends State<Home> {
             ? GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2, mainAxisSpacing: 16),
+                itemCount: CatalogModel.items.length,
                 itemBuilder: ((context, index) {
                   final item = CatalogModel.items[index];
                   return Card(
