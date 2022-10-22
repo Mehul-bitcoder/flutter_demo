@@ -40,14 +40,12 @@ class _HomeState extends State<Home> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
-        child: (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+        child: (CatalogModel.items.isNotEmpty)
             ? ListView.builder(
                 itemCount: CatalogModel.items.length,
-                itemBuilder: ((context, index) {
-                  return ItemWidget(
-                    item: CatalogModel.items[index],
-                  );
-                }))
+                itemBuilder: (context, index) => ItemWidget(
+                      item: CatalogModel.items[index],
+                    ))
             : const Center(
                 child: CircularProgressIndicator(),
               ),

@@ -1,5 +1,5 @@
 class CatalogModel {
-  static late List<Item> items;
+  static List<Item> items = [];
 }
 
 class Item {
