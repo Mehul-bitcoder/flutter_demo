@@ -1,4 +1,5 @@
 import 'package:appdemo/custom_pallete.dart';
+import 'package:appdemo/screens/cart.dart';
 import 'package:appdemo/screens/home.dart';
 import 'package:appdemo/screens/login.dart';
 import 'package:appdemo/utils/routes.dart';
@@ -17,15 +18,16 @@ class DemoApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // home: Home(),
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.loginRoute,
       debugShowCheckedModeBanner: false,
       routes: {
         "/": ((context) => const Login()),
         MyRoutes.homeRoute: ((context) => const Home()),
         MyRoutes.loginRoute: ((context) => const Login()),
+        MyRoutes.cartRoute: ((context) => const Cart()),
       },
     );
   }
