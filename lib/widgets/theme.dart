@@ -21,7 +21,7 @@ class MyTheme {
             color: Colors.black,
           ),
           titleTextStyle: TextStyle(
-              color: Colors.black, fontSize: 18, fontWeight: FontWeight.w500)));
+              color: Colors.black, fontSize: 24, fontWeight: FontWeight.w500)));
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
       fontFamily: GoogleFonts.poppins().fontFamily,
@@ -39,7 +39,7 @@ class MyTheme {
             color: Colors.white,
           ),
           titleTextStyle: TextStyle(
-              color: Colors.black, fontSize: 18, fontWeight: FontWeight.w500)));
+              color: Colors.white, fontSize: 24, fontWeight: FontWeight.w500)));
 
   //Colors
   static Color creamColor = const Color(0xfff5f5f5);
