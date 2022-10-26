@@ -1,5 +1,4 @@
 import 'package:appdemo/models/cart.dart';
-import 'package:appdemo/widgets/theme.dart';
 import "package:flutter/material.dart";
 import "package:velocity_x/velocity_x.dart";
 
@@ -15,7 +14,7 @@ class Cart extends StatelessWidget {
       ),
       backgroundColor: context.canvasColor,
       body: Column(children: [
-        const _CartList().p32().expand(),
+        _CartList().p32().expand(),
         const Divider(),
         _CartTotal()
       ]),
@@ -55,14 +54,7 @@ class _CartTotal extends StatelessWidget {
   }
 }
 
-class _CartList extends StatefulWidget {
-  const _CartList({super.key});
-
-  @override
-  State<_CartList> createState() => __CartListState();
-}
-
-class __CartListState extends State<_CartList> {
+class _CartList extends StatelessWidget {
   final _cart = CartModel();
 
   @override
@@ -77,7 +69,7 @@ class __CartListState extends State<_CartList> {
                   trailing: IconButton(
                     onPressed: () {
                       _cart.remove(_cart.items[index]);
-                      setState(() {});
+                      // setState(() {});
                     },
                     icon: const Icon(Icons.remove_circle_outline),
                   ),

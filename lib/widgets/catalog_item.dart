@@ -1,9 +1,7 @@
-import 'package:appdemo/models/cart.dart';
 import 'package:appdemo/models/catalog.dart';
 import 'package:appdemo/widgets/add_to_cart.dart';
 import "package:flutter/material.dart";
 import 'package:velocity_x/velocity_x.dart';
-import 'package:appdemo/widgets/theme.dart';
 
 class CatalogItem extends StatelessWidget {
   const CatalogItem({super.key, required this.catalog});
@@ -14,7 +12,7 @@ class CatalogItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return VxBox(
         child: Padding(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       child: Row(
         children: [
           Hero(

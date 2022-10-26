@@ -1,14 +1,14 @@
-import 'package:appdemo/custom_pallete.dart';
+import 'package:appdemo/core/store.dart';
 import 'package:appdemo/screens/cart.dart';
 import 'package:appdemo/screens/home.dart';
 import 'package:appdemo/screens/login.dart';
 import 'package:appdemo/utils/routes.dart';
 import 'package:appdemo/widgets/theme.dart';
 import "package:flutter/material.dart";
-import 'package:google_fonts/google_fonts.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 void main() {
-  runApp(const DemoApp());
+  runApp(VxState(store: MyStore(), child: const DemoApp()));
 }
 
 class DemoApp extends StatelessWidget {
